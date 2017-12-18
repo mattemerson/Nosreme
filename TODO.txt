@@ -1,0 +1,38 @@
+Things to do
+-Command Notes/Scripts
+-Suggested environmental set-up
+
+Eclipse
+-Upgrade to Oxygen
+-Maven Plug-in
+
+Maven
+-Download Maven
+
+Github
+-Refresh command file
+-Build-up comparison notes
+-CI/CD
+
+Akka
+-Download
+-Integrated with Spring
+-Akka Persistence
+
+Spring REST
+
+Databases
+-MySQL
+-In-Memory DB
+-NoSQL DB (Mongo, Cassandra)
+
+Caching
+-Radis
+-Memcache
+-Elasticache
+
+-Artifactory
+
+Try Celery
+
+-Use a Proper Structure
