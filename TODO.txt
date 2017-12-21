@@ -1,6 +1,12 @@
 https://maven.apache.org/
 https://en.wikipedia.org/wiki/List_of_software_package_management_systems
 https://gradle.org/install/
+https://spring.io/guides/gs/gradle/
+https://akka.io/
+https://developer.lightbend.com/start/?group=akka&project=akka-quickstart-java
+https://stackoverflow.com/questions/9577012/whats-the-equivalent-of-pythons-celery-project-for-java
+https://hazelcast.com/resources/whitepaper-redis-comparison/
+https://stackoverflow.com/questions/10137857/is-redis-just-a-cache
 
 Things to do
 -Command Notes/Scripts
@@ -10,8 +16,8 @@ Eclipse
 -Upgrade to Oxygen
 -Maven Plug-in
 
-Maven
--Download Maven
+Gradle
+-Download gradle
 
 Github
 -Refresh command file
