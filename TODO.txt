@@ -6,6 +6,7 @@ https://akka.io/
 https://developer.lightbend.com/start/?group=akka&project=akka-quickstart-java
 https://stackoverflow.com/questions/9577012/whats-the-equivalent-of-pythons-celery-project-for-java
 https://hazelcast.com/resources/whitepaper-redis-comparison/
+https://stackoverflow.com/questions/10137857/is-redis-just-a-cache
 
 Things to do
 -Command Notes/Scripts
