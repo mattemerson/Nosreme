@@ -4,6 +4,7 @@ https://gradle.org/install/
 https://spring.io/guides/gs/gradle/
 https://akka.io/
 https://developer.lightbend.com/start/?group=akka&project=akka-quickstart-java
+https://stackoverflow.com/questions/9577012/whats-the-equivalent-of-pythons-celery-project-for-java
 
 Things to do
 -Command Notes/Scripts
