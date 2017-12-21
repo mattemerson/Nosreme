@@ -3,6 +3,7 @@ https://en.wikipedia.org/wiki/List_of_software_package_management_systems
 https://gradle.org/install/
 https://spring.io/guides/gs/gradle/
 https://akka.io/
+https://developer.lightbend.com/start/?group=akka&project=akka-quickstart-java
 
 Things to do
 -Command Notes/Scripts
