@@ -14,8 +14,8 @@ Eclipse
 -Upgrade to Oxygen
 -Maven Plug-in
 
-Maven
--Download Maven
+Gradle
+-Download gradle
 
 Github
 -Refresh command file
