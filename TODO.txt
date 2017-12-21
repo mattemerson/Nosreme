@@ -1,6 +1,7 @@
 https://maven.apache.org/
 https://en.wikipedia.org/wiki/List_of_software_package_management_systems
 https://gradle.org/install/
+https://spring.io/guides/gs/gradle/
 
 Things to do
 -Command Notes/Scripts
