@@ -28,6 +28,8 @@ Github
 -Build-up comparison notes
 -CI/CD
 
+Neo4j
+
 Akka
 -Download
 -Integrated with Spring
