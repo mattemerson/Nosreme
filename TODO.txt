@@ -8,6 +8,8 @@ https://stackoverflow.com/questions/9577012/whats-the-equivalent-of-pythons-cele
 https://hazelcast.com/resources/whitepaper-redis-comparison/
 https://stackoverflow.com/questions/10137857/is-redis-just-a-cache
 
+Spring with OAuth
+https://spring.io/guides/tutorials/spring-boot-oauth2/
 zookeeper
 
 Things to do
