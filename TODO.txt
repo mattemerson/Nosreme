@@ -7,6 +7,48 @@ https://developer.lightbend.com/start/?group=akka&project=akka-quickstart-java
 https://stackoverflow.com/questions/9577012/whats-the-equivalent-of-pythons-celery-project-for-java
 https://hazelcast.com/resources/whitepaper-redis-comparison/
 https://stackoverflow.com/questions/10137857/is-redis-just-a-cache
+https://spring.io/guides/gs/reactive-rest-service/
+http://www.baeldung.com/persistence-with-spring-series/
+
+You can create a Properties file.
+
+Downloaded a project to upload files...it worked!
+
+Created basic scheduler and a basic batch upload
+
+This goes through the application-properties?
+https://docs.spring.io/spring-boot/docs/current/reference/html/common-application-properties.html
+
+spring.datasource.platform
+
+Downloaded spring sts support
+
+Go into the project directory and do this....
+gradlew bootRun
+
+Gradle added gradle home and to path
+Java added Java home and to path
+
+Downloaded 7zip (evidently this is in the path?)
+Look at Spring Profiles
+
+cURL installed onto the path
+
+Install Git for Windows
+http://gitforwindows.org/
+Git is installed.  Need to go through a tutorial.
+
+My Personal Work Email
+nosreme.j.wettham@gmail.com
+200ten##
+
+My Personal Amazon Account (the free plan); Samarkand is the plan
+nosreme.j.wettham@gmail.com
+200ten##
+
+Spring REST Tutorial to Read
+https://spring.io/guides/tutorials/bookmarks/
+https://spring.io/guides/gs/rest-service/ (this one has links to a ton of other tutorials)
 
 zookeeper
 
@@ -15,16 +57,19 @@ Things to do
 -Suggested environmental set-up
 
 Eclipse
--Upgrade to Oxygen
--Maven Plug-in
+-Upgrade to Oxygen (DONE)
+-Gradle Plug-in (DONE)
 
-Gradle
+Gradle (done!)
 -Download gradle
+-Tutorial
+-Gradle Wrapper! (it just kind of does this)
 
 Github
 -Refresh command file
 -Build-up comparison notes
 -CI/CD
+-Command Line Tool
 
 Akka
 -Download
@@ -32,10 +77,17 @@ Akka
 -Akka Persistence
 
 Spring REST
+-Got this working.  Look at this page for other examples
 
 Databases
 -MySQL
--In-Memory DB
+-In-Memory DB; http://www.baeldung.com/java-in-memory-databases
+https://en.wikipedia.org/wiki/List_of_in-memory_databases
+https://spring.io/guides/gs/relational-data-access/; this used an H2 database; also pointed to ther tutorials?  QUESTION: how would I used a HyperSQLDB?
+
+-Looked at Uploading files
+
+
 -NoSQL DB (Mongo, Cassandra)
 
 Caching
@@ -45,6 +97,6 @@ Caching
 
 -Artifactory
 
-Try Celery
+Try Celery (this is Python only)
 
 -Use a Proper Structure
