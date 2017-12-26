@@ -50,6 +50,8 @@ Spring REST Tutorial to Read
 https://spring.io/guides/tutorials/bookmarks/
 https://spring.io/guides/gs/rest-service/ (this one has links to a ton of other tutorials)
 
+Spring with OAuth
+https://spring.io/guides/tutorials/spring-boot-oauth2/
 zookeeper
 
 Things to do
@@ -70,6 +72,8 @@ Github
 -Build-up comparison notes
 -CI/CD
 -Command Line Tool
+
+Neo4j
 
 Akka
 -Download
