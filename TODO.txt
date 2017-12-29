@@ -10,6 +10,44 @@ https://stackoverflow.com/questions/10137857/is-redis-just-a-cache
 https://spring.io/guides/gs/reactive-rest-service/
 http://www.baeldung.com/persistence-with-spring-series/
 
+TODO; in no particular order
+AWS Stuff (this link is where a lot of the getting started tutorials are)
+https://aws.amazon.com/getting-started/tutorials/
+
+Neo4j (there is the Neo4j website and the Spring website)
+https://neo4j.com/docs/java-reference/current/
+
+https://spring.io/guides/gs/accessing-neo4j-data-rest/
+
+Oauth2 (there is a spring tutorial that walks you through this)
+gs-spring-oauth2-simple (uses facebook for authzn)
+
+Docker
+-Get it loaded on my machine
+-Get it started in a spring tutorial
+https://spring.io/guides/gs/spring-boot-docker/
+
+-Get it started on AWS
+
+Downloaded Properties
+akka-quickstart
+gs-batch-processing
+gs-gradle (basic)
+gs-messaging-jms-master
+gs-relational-database-master (h2 in-memory-db)
+gs-rest-service (basic rest; needs plumbing to a database)
+gs-scheduling-tasks (the utterly basic; could do more complicated cron)
+gs-uploading-files-master (could upload and had a simple front-end using thymeleaf)
+gs-access-data-jpa (shows off the Repository JPA functions of spring - builds dao's for you)
+gs-access-data-rest-master (shows off how the Spring REST can create HATEOS interfaces backed by JPA repositories; using just some annotations and basic tags)
+gs-rest-client-master (allows you to connect to and consume a Rest endpoint; using some annotations)
+gs-serving-web-content-master (how to use Spring MVC)
+gs-access-data-neo4j
+gs-access-neo4j-rest (neo4j/neo4j or secret if I change it)
+
+Spring Reference Documentation
+https://docs.spring.io/spring/docs/current/spring-framework-reference/#jms-destinations
+
 You can create a Properties file.
 
 Downloaded a project to upload files...it worked!
@@ -50,8 +88,6 @@ Spring REST Tutorial to Read
 https://spring.io/guides/tutorials/bookmarks/
 https://spring.io/guides/gs/rest-service/ (this one has links to a ton of other tutorials)
 
-Spring with OAuth
-https://spring.io/guides/tutorials/spring-boot-oauth2/
 zookeeper
 
 Things to do
@@ -72,8 +108,6 @@ Github
 -Build-up comparison notes
 -CI/CD
 -Command Line Tool
-
-Neo4j
 
 Akka
 -Download
@@ -104,3 +138,17 @@ Caching
 Try Celery (this is Python only)
 
 -Use a Proper Structure
+
+--Docker
+---followed the steps in the following Spring boot tutorial to set-up my system to run Docker
+-- on my home machine (5.2.4) (Oracle VM Virtual Box)
+--https://spring.io/guides/tutorials/spring-boot-oauth2/
+--Downloaded and installed VirtualBox; https://www.virtualbox.org/wiki/Downloads for windows
+-- Docker community edition install: https://docs.docker.com/engine/installation/ (Stable)
+--RAN INTO VARIOUS PROBLEMS WITH THIS
+
+
+https://en.wikipedia.org/wiki/Social_login
+ocial login is a form of single sign-on using existing information from a social networking service such as Facebook, Twitter or Google+, to sign into a third party website instead of creating a new login account specifically for that website. It is designed to simplify logins for end users as well as provide more and more reliable demographic information to web developers
+
+mvn spring-boot:run
