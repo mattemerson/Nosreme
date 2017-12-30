@@ -12,7 +12,9 @@ http://www.baeldung.com/persistence-with-spring-series/
 
 TODO; in no particular order
 AWS Stuff (this link is where a lot of the getting started tutorials are)
-https://aws.amazon.com/getting-started/tutorials/
+https://aws.amazon.com/getting-started/tutorials/ (this is in the UI)
+http://docs.aws.amazon.com/sdk-for-java/v1/developer-guide/welcome.html (this is in the SDK)
+Download AWS Toolkit for Eclipse 2.0
 
 Neo4j (there is the Neo4j website and the Spring website)
 https://neo4j.com/docs/java-reference/current/
