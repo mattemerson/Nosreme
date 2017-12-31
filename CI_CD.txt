@@ -1,0 +1,37 @@
+Do a review of CI_CD tools.
+
+Look into a adoc?
+
+What is the Atlassian baseline?
+What is supported by AWS?
+
+Github
+Gradle vs. Maven
+
+Code Path (Code Coverage as well as path coverage)
+Lint
+
+Code Coverage
+CodeLint
+
+Mono-repo vs. Multi-repo
+
+Code Standards
+Google?
+What is ours?
+
+FindBugs
+(+the extension)
+
+Mockito
+JUNIT
+TestNG
+
+JIRA
+Linkages
+
+Pull Requests
+
+Documentation
+Linkages into the codebase
+
