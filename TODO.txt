@@ -1,14 +1,17 @@
 Spend time looking at CI/CD tools.  Where are we now?  Where do we want to go?
 
 http://groovy-lang.org/
-Depth- vs. Breadth- first search (write the code for this)
-https://java2blog.com/depth-first-search-in-java/
 Social Login
 Zookeeper
 Apache Kafka vs. RabbitMQ vs. AWS SQS
 Block Chain Processing
 Talk with Lucas about CAP
 
+Depth- vs. Breadth- first search (write the code for this)
+https://java2blog.com/depth-first-search-in-java/
+Key Idea: Always mark the node has visited before adding it to a collection
+DFS: Use recursion or stack (for FIFO)
+BFS: Use a queue
 
 CI/CD Tools.  Metrics!
 OpenAPI (this is what I want Akash to work on)
