@@ -1,4 +1,13 @@
 Spend time looking at CI/CD tools.  Where are we now?  Where do we want to go?
+Look at Github CLI Documentation
+
+Look at Github, Twitter, Facebook, Google APIs
+
+Look at Apache Camel (comparison to Spring Integration)
+https://en.wikipedia.org/wiki/Enterprise_application_integration
+https://en.wikipedia.org/wiki/Apache_Camel
+https://dzone.com/articles/when-use-apache-camel
+https://stackoverflow.com/questions/3034054/when-to-use-spring-integration-vs-camel
 
 CI/CD Tools.  Metrics!
 OpenAPI (this is what I want Akash to work on)
