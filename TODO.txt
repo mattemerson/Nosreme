@@ -9,6 +9,19 @@ https://en.wikipedia.org/wiki/Apache_Camel
 https://dzone.com/articles/when-use-apache-camel
 https://stackoverflow.com/questions/3034054/when-to-use-spring-integration-vs-camel
 
+http://groovy-lang.org/
+Social Login
+Zookeeper
+Apache Kafka vs. RabbitMQ vs. AWS SQS
+Block Chain Processing
+Talk with Lucas about CAP
+
+Depth- vs. Breadth- first search (write the code for this)
+https://java2blog.com/depth-first-search-in-java/
+Key Idea: Always mark the node has visited before adding it to a collection
+DFS: Use recursion or stack (for FIFO)
+BFS: Use a queue
+
 CI/CD Tools.  Metrics!
 OpenAPI (this is what I want Akash to work on)
 
