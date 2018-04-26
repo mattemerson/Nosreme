@@ -1,3 +1,8 @@
+API HATEOS Formats
+Comparisson: https://sookocheff.com/post/api/on-choosing-a-hypermedia-format/
+HAL format: http://stateless.co/hal_specification.html
+
+
 Spend time looking at CI/CD tools.  Where are we now?  Where do we want to go?
 Look at Github CLI Documentation
 
