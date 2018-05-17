@@ -24,7 +24,7 @@ public class AmazonKinesisApplicationRecordProcessorFactory implements IRecordPr
     /**
      * {@inheritDoc}
      */
-    @Override
+    //@Override
     public IRecordProcessor createProcessor() {
         return new AmazonKinesisApplicationSampleRecordProcessor();
     }
