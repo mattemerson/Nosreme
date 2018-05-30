@@ -1,6 +1,6 @@
-package org.nosreme.semver;
+package org.nosreme.system.logical;
 
-import org.nosreme.system.logical.Service;
+import org.nosreme.semver.Version;
 
 public class LogicalService implements Service
 {

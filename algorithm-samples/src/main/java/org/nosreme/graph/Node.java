@@ -47,4 +47,32 @@ public class Node
 	public void setNeighbours(List<Node> neighbours) {
 		this.neighbours = neighbours;
 	}
+	
+	@Override
+	public int hashCode()
+	{
+		return Integer.hashCode(data());
+	}
+	
+	@Override
+	public boolean equals(Object node)
+	{
+		if (node == null)
+		{
+			return false;
+		}
+		if (!(node instanceof Node))
+		{
+			return false;
+		}
+		Node otherNode = (Node)node;
+		
+		if (otherNode.data() == this.data())
+		{
+			return true;
+		}
+		
+		return false;
+		
+	}
 }

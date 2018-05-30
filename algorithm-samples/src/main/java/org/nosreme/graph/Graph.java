@@ -6,5 +6,5 @@ public interface Graph {
 	Node root();
 	List<Node> getChildrenForNode(Node node);
 	void unvisitAll();
-	
+	Node get
 }

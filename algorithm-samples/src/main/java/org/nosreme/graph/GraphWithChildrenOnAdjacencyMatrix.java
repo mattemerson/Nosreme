@@ -3,7 +3,8 @@ package org.nosreme.graph;
 import java.util.ArrayList;
 import java.util.List;
 
-public class GraphWithChildrenOnAdjacencyMatrix implements Graph{
+public class GraphWithChildrenOnAdjacencyMatrix implements Graph
+{
 	private Node root;
 	private List<Node> nodes;
 	private int[][] adjacencyMatrix;
@@ -13,6 +14,24 @@ public class GraphWithChildrenOnAdjacencyMatrix implements Graph{
 		this.root = root;
 		this.nodes = nodes;
 		this.adjacencyMatrix = adjacencyMatrix;
+	}
+	
+	/**
+	 * Convenience method to allow us to get into the search graph.  In practice, you would have the node itself.
+	 * @param nonGraphNode
+	 * @return
+	 */
+	@Override
+	public Node getSearchNode(Node nonGraphNode)
+	{
+		for (Node node : nodes)
+		{
+			if (node.equals(nonGraphNode))
+			{
+				return node;
+			}
+		}
+		return node;
 	}
 	
 	@Override

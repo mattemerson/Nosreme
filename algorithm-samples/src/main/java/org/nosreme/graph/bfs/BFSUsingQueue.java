@@ -12,16 +12,17 @@ import org.nosreme.graph.Node;
 public class BFSUsingQueue implements Algorithm {
 
 	@Override
-	public void solve(Graph graph) {
+	public void solve(Graph graph, Node end) {
 		
-		solve(graph, graph.root());		
+		solve(graph, graph.root(), end);		
 	}
 
-	private void solve(Graph graph, Node node)
+	@Override
+	public void solve(Graph graph, Node start, Node end)
 	{
 		Queue<Node> queue = new LinkedList<Node>();
-		node.visit();
-		queue.add(node);
+		start.visit();
+		queue.add(start);
 		
 		while(!queue.isEmpty())
 		{

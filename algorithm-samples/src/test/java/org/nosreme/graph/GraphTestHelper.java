@@ -2,7 +2,7 @@ package org.nosreme.graph;
 
 import java.util.Arrays;
 
-public class GraphHelper {
+public class GraphTestHelper {
 	
 	public static Graph getGraphWithChildrenOnNodes()
 	{

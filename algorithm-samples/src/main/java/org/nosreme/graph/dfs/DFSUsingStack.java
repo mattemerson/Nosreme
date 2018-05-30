@@ -20,16 +20,17 @@ public class DFSUsingStack implements Algorithm {
 	 * 5. Return to 3 unless there is nothing on the staack.
 	 */
 	@Override
-	public void solve(Graph graph)
+	public void solve(Graph graph, Node end)
 	{
-		solve(graph, graph.root());
+		solve(graph, graph.root(), end);
 	}
 	
-	private void solve(Graph graph, Node node)
+	@Override
+	public void solve(Graph graph, Node start, Node end)
 	{
 		Stack<Node> stack=new Stack<Node>();
-		stack.add(node);
-		node.visit();
+		stack.add(start);
+		start.visit();
 		while (!stack.isEmpty())
 		{
 			Node element=stack.pop();
@@ -37,11 +38,11 @@ public class DFSUsingStack implements Algorithm {
  
 			List<Node> neighbours=graph.getChildrenForNode(element);
 			for (int i = 0; i < neighbours.size(); i++) {
-				Node n=neighbours.get(i);
-				if(n!=null && !n.isVisited())
+				Node child=neighbours.get(i);
+				if(child!=null && !child.isVisited())
 				{
-					stack.add(n);
-					n.visit();
+					stack.add(child);
+					child.visit();
  
 				}
 			}

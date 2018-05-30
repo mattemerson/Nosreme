@@ -7,12 +7,12 @@ import java.util.HashSet;
 import java.util.Set;
 
 import org.junit.Test;
-import org.nosreme.semver.LogicalService;
 import org.nosreme.semver.Version;
 import org.nosreme.semver.VersionImpl;
 import org.nosreme.system.logical.ComponentDescriptor;
 import org.nosreme.system.logical.ComponentType;
 import org.nosreme.system.logical.LogicalProduct;
+import org.nosreme.system.logical.LogicalService;
 import org.nosreme.system.logical.Product;
 import org.nosreme.system.logical.Service;
 import org.nosreme.system.physical.Build;

@@ -8,20 +8,21 @@ import org.nosreme.graph.Node;
 public class DFSUsingRecursion implements Algorithm {
 
 	@Override
-	public void solve(Graph graph)
+	public void solve(Graph graph, Node end)
 	{
-		solve(graph, graph.root());
+		solve(graph, graph.root(), end);
 	}
 	
-	private void solve(Graph graph, Node node) {
+	@Override
+	public void solve(Graph graph, Node start, Node end) {
 
-		System.out.print(node.data() + " ");
-		node.visit();
-		for (Node child : graph.getChildrenForNode(node))
+		System.out.print(start.data() + " ");
+		start.visit();
+		for (Node child : graph.getChildrenForNode(start))
 		{
 			if ( (child != null) && (!child.isVisited()))
 			{
-				solve(graph, child);
+				solve(graph, child, end);
 			}
 		}
 		
