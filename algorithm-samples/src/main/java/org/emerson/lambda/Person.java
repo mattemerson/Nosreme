@@ -4,6 +4,14 @@ import java.time.LocalDate;
 
 public class Person {
 
+	public String getState() {
+		return state;
+	}
+
+	public void setState(String state) {
+		this.state = state;
+	}
+
 	public enum Sex {
 		MALE, FEMALE
 	}
@@ -13,6 +21,12 @@ public class Person {
 	private Sex gender;
 	private String emailAddress;
 	private int age;
+	private String state;
+	
+	public Person()
+	{
+		
+	}
 	
 	public Person(String name, LocalDate birthday, Sex gender, String emailAddress, int age)
 	{

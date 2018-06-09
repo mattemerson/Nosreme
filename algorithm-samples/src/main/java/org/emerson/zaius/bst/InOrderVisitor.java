@@ -1,12 +1,15 @@
 package org.emerson.zaius.bst;
 
+import java.util.List;
+
 public class InOrderVisitor implements Visitor
 {
-	private StringBuilder builder;
+	//private StringBuilder builder;
+	private List<String> collector;
 	
-	public InOrderVisitor(StringBuilder builder)
+	public InOrderVisitor(List<String> collector)
 	{
-		this.builder = builder;
+		this.collector = collector;
 	}
 	
 	@Override
@@ -20,7 +23,7 @@ public class InOrderVisitor implements Visitor
 	{
 		if (node != null)
 		{
-			builder.append(node.getValue()).append(",");
+			collector.add(Integer.toString(node.getValue()));
 			this.visit(node.getLeftChild());
 			this.visit(node.getRightChild());
 		}

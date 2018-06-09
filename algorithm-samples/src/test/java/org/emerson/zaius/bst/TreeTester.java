@@ -1,8 +1,11 @@
 package org.emerson.zaius.bst;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
+import org.emerson.file.FileUtil;
 import org.emerson.zaius.bst.BinaryTree;
 import org.emerson.zaius.bst.InOrderVisitor;
 import org.junit.Assert;
@@ -13,7 +16,18 @@ public class TreeTester
 	@Test
 	public void testBreadthFirstInsertShouldPass()
 	{
-		List<Integer> inputs = new ArrayList<Integer>();
+		String filename1 = "src/test/java/org/emerson/zaius/bst/input.txt";
+		List<String> lines = FileUtil.readFileLineByLineUsingStreams(filename1);
+		String line = lines.get(0);		
+		String[] values = line.split(",");
+	    System.out.println(line);
+	    System.out.println(Arrays.asList(values));
+	   
+	    //Integer.
+	    
+	    
+		List<Integer> inputs = Arrays.asList(values).stream().map(s->Integer.parseInt(s)).collect(Collectors.toList());
+		System.out.println(inputs);		
 		
 		BinaryTree tree = new BinaryTree();
 		for (Integer input : inputs)
@@ -21,11 +35,17 @@ public class TreeTester
 			tree.addNode(input);
 		}
 				
-		StringBuilder builder = new StringBuilder();
-		InOrderVisitor visitor = new InOrderVisitor(builder);
+		List<String> actuals = new ArrayList<String>();
+		InOrderVisitor visitor = new InOrderVisitor(actuals);
 		tree.accept(visitor);
+				
+		System.out.println(actuals);
 		
-		String output = null; // read from output		
-		Assert.assertSame(output, builder.toString());		
+		String filename2 = "src/test/java/org/emerson/zaius/bst/output.txt";
+		List<String> expected = FileUtil.readFileLineByLineUsingStreams(filename2);
+		System.out.println(expected);
+		
+		Assert.assertArrayEquals(expected.toArray(new String[0]), actuals.toArray(new String[0]));
+		System.out.println("Victory!");
 	}
 }

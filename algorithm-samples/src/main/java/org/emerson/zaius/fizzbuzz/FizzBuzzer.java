@@ -4,5 +4,5 @@ import java.util.List;
 
 public interface FizzBuzzer
 {
-	List<String> process(List<Integer> inputs);
+	List<String> process(int low, int high);
 }
