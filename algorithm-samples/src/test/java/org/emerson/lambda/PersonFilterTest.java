@@ -182,7 +182,6 @@ public class PersonFilterTest
 	    .forEach(email -> System.out.println(email));
 	}
 	
-	
 	/**
 	 * The ultimate expression of what you can do with the static method
 	 * 1. Takes an iterable list, tests each member, performs a transform on the member and then does something with it

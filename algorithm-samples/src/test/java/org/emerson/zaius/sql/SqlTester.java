@@ -6,12 +6,15 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
 import java.util.function.Function;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 import org.emerson.file.FileUtil;
 import org.emerson.lambda.Person;
@@ -70,7 +73,7 @@ public class SqlTester
 		actuals.add("");
 		
 		String filename2 = "src/test/java/org/emerson/zaius/sql/output.txt";
-		List<String> expected = FileUtil.readFileLineByLineUsingStreams(filename2);
+		List<String> expected = readFileLineByLineUsingStreams(filename2);
 		//System.out.println(expected);
 
 		
@@ -139,10 +142,15 @@ public class SqlTester
 */
 	private List<String> calculateAverageAgePerState(List<Person> population)
 	{
+		/*
+		Comparator.comparing(Person::getLastName)
+		2         .thenComparing(Person::getFirstName
+			*/
+		
 		List<String> output = population
 				.stream()
 				.collect(Collectors.groupingBy(Person::getState, Collectors.averagingDouble(Person::getAge)))
-				.entrySet().stream()
+				.entrySet().stream()				
 				.sorted( (s1,s2) -> {
 										// Desc by Long, Asc by Key
 										int r = s1.getValue().compareTo(s2.getValue());
@@ -153,7 +161,7 @@ public class SqlTester
 										}
 										return r;	
 									}
-				)									
+				)				
 			    .map(map-> map.getKey() + "," + String.format("%.0f", map.getValue()))
 			    .collect(Collectors.toList());
 		
@@ -177,6 +185,22 @@ public class SqlTester
 
 		return output;
 	}	
+	
+	public static List<String> readFileLineByLineUsingStreams(String filename)
+	{
+		List<String> lines = null;
+		
+		//read file into stream, try-with-resources
+		try (Stream<String> stream = Files.lines(Paths.get(filename)))
+		{
+			lines = stream.collect(Collectors.toList());
+			
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		
+		return lines;
+	}
 	
 	public static <T> List<T> readCSVFileUsingStreams(String inputFilePath, Function<String,T> mapToItem)
 	{
