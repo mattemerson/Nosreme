@@ -1,42 +1,76 @@
 package org.emerson.file;
 
 import java.io.File;
+import java.io.IOException;
+import java.io.UncheckedIOException;
+import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.List;
 import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class SimpleFileDAO<T> implements ROMultiFileMapperDAO<T>, ROSingleFileMapperDAO<T> 
 {
-
+	protected long linesToSkip;
+	
+	public SimpleFileDAO()
+	{
+		this(0);
+	}
+	
+	protected SimpleFileDAO(int linesToSkip)
+	{
+		this.linesToSkip = linesToSkip;
+	}
+	
 	@Override
 	public List<T> readLines(Function<String, T> mapper, String filename) {
-		return null;
+		return readLines(mapper, FileSource.fromFilename(filename).toPath());
 	}
 
 	@Override
-	public List<T> readLines(Function<String, T> mapper, Path path) {
-		return null;
+	public List<T> readLines(Function<String, T> mapper, Path path)
+	{	
+		try(Stream<String> stream = Files.lines(path);)
+		{					
+			return stream.skip(linesToSkip).map(s->mapper.apply(s)).collect(Collectors.toList());
+		}
+		catch(IOException ioe)
+		{
+			throw new UncheckedIOException(ioe);
+		}
 	}
 
 	@Override
 	public List<T> readLines(Function<String, T> mapper, File file) {
-		return null;
+		return readLines(mapper, FileSource.fromFile(file).toPath());
 	}
 
 	@Override
 	public T read(Function<String, T> mapper, String filename) {
-		return null;
+		
+		return read(mapper, FileSource.fromFilename(filename).toPath());
 	}
 
 	@Override
 	public T read(Function<String, T> mapper, Path path) {
-				
-		return null;
+		
+		try
+		{
+			String whatsRead = new String(Files.readAllBytes(path));
+			return mapper.apply(whatsRead);
+		}
+		catch(IOException ioe)
+		{
+			throw new UncheckedIOException(ioe);
+		}
 	}
 
 	@Override
 	public T read(Function<String, T> mapper, File file) {
-		return null;
+		
+		return read(mapper, FileSource.fromFile(file).toPath());
 	}
 
 }
