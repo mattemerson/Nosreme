@@ -1,4 +1,4 @@
-package org.emerson.file;
+package org.emerson.filereadsamples;
 
 import java.nio.file.Paths;
 import java.util.List;

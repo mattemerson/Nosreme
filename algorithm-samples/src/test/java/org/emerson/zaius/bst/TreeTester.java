@@ -5,7 +5,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import org.emerson.file.FileUtil;
+import org.emerson.file.StringFileDAO;
 import org.emerson.zaius.bst.BinaryTree;
 import org.emerson.zaius.bst.InOrderVisitor;
 import org.junit.Assert;
@@ -17,7 +17,8 @@ public class TreeTester
 	public void testBreadthFirstInsertShouldPass()
 	{
 		String filename1 = "src/test/java/org/emerson/zaius/bst/input.txt";
-		List<String> lines = FileUtil.readFileLineByLineUsingStreams(filename1);
+		StringFileDAO dao = new StringFileDAO();
+		List<String> lines = dao.readLines(filename1);
 		String line = lines.get(0);		
 		String[] values = line.split(",");
 	    System.out.println(line);
@@ -42,7 +43,7 @@ public class TreeTester
 		System.out.println(actuals);
 		
 		String filename2 = "src/test/java/org/emerson/zaius/bst/output.txt";
-		List<String> expected = FileUtil.readFileLineByLineUsingStreams(filename2);
+		List<String> expected = dao.readLines(filename2);
 		System.out.println(expected);
 		
 		Assert.assertArrayEquals(expected.toArray(new String[0]), actuals.toArray(new String[0]));

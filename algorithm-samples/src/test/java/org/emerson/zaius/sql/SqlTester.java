@@ -16,7 +16,6 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-import org.emerson.file.FileUtil;
 import org.emerson.lambda.Person;
 import org.junit.Assert;
 import org.junit.Test;
@@ -56,7 +55,10 @@ public class SqlTester
 			};
 		
 		String filename1 = "src/test/java/org/emerson/zaius/sql/people.csv";
-		List<Person> persons = readCSVFileUsingStreams(filename1, mapToItem);
+		
+		PersonFileDAO personDAO = new PersonFileDAO();
+		List<Person> persons = personDAO.readLines(mapToItem, filename1);
+		//List<Person> persons = readCSVFileUsingStreams(filename1, mapToItem);
 		persons.stream().forEach(p->System.out.println(toZString(p)));
 		
 

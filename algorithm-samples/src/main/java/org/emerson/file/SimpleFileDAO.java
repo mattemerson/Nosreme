@@ -1,7 +1,11 @@
 package org.emerson.file;
 
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.io.UncheckedIOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -32,7 +36,13 @@ public class SimpleFileDAO<T> implements ROMultiFileMapperDAO<T>, ROSingleFileMa
 	@Override
 	public List<T> readLines(Function<String, T> mapper, Path path)
 	{	
-		try(Stream<String> stream = Files.lines(path);)
+		File inputF = path.toFile();
+        try(
+      	      InputStream inputFS = new FileInputStream(inputF);
+      	      BufferedReader br = new BufferedReader(new InputStreamReader(inputFS));
+        	  Stream<String> stream = br.lines();
+        	)
+		//try(Stream<String> stream = Files.lines(path);)
 		{					
 			return stream.skip(linesToSkip).map(s->mapper.apply(s)).collect(Collectors.toList());
 		}
