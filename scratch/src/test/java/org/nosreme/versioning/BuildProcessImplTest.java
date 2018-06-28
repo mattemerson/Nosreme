@@ -7,6 +7,22 @@ import java.util.HashSet;
 import java.util.Set;
 
 import org.junit.Test;
+import org.nosreme.semver.Version;
+import org.nosreme.semver.VersionImpl;
+import org.nosreme.system.logical.ComponentDescriptor;
+import org.nosreme.system.logical.ComponentType;
+import org.nosreme.system.logical.LogicalProduct;
+import org.nosreme.system.logical.LogicalService;
+import org.nosreme.system.logical.Product;
+import org.nosreme.system.logical.Service;
+import org.nosreme.system.physical.Build;
+import org.nosreme.system.physical.BuildArtifactInformation;
+import org.nosreme.system.physical.BuildImpl;
+import org.nosreme.system.physical.BuildIncrement;
+import org.nosreme.system.physical.BuildProcess;
+import org.nosreme.system.physical.BuildProcessImpl;
+import org.nosreme.system.physical.ComponentArtifact;
+import org.nosreme.system.physical.ProductArtifact;
 
 public class BuildProcessImplTest
 {

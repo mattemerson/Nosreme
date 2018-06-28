@@ -51,7 +51,7 @@ public class AmazonKinesisApplicationSampleRecordProcessor implements IRecordPro
     /**
      * {@inheritDoc}
      */
-    @Override
+    //@Override
     public void initialize(String shardId) {
         LOG.info("Initializing record processor for shard: " + shardId);
         this.kinesisShardId = shardId;
@@ -60,7 +60,7 @@ public class AmazonKinesisApplicationSampleRecordProcessor implements IRecordPro
     /**
      * {@inheritDoc}
      */
-    @Override
+    //@Override
     public void processRecords(List<Record> records, IRecordProcessorCheckpointer checkpointer) {
         LOG.info("Processing " + records.size() + " records from " + kinesisShardId);
 
@@ -137,7 +137,7 @@ public class AmazonKinesisApplicationSampleRecordProcessor implements IRecordPro
     /**
      * {@inheritDoc}
      */
-    @Override
+    //@Override
     public void shutdown(IRecordProcessorCheckpointer checkpointer, ShutdownReason reason) {
         LOG.info("Shutting down record processor for shard: " + kinesisShardId);
         // Important to checkpoint after reaching end of shard, so we can start processing data from child shards.
