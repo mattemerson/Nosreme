@@ -16,11 +16,49 @@ import org.junit.jupiter.api.Test;
 public class KnapsackProblemTest
 {
 	@Test
+	public void testFullKnapsackUsingDynamicProgrammingShouldPass()
+	{
+		int[] weights = [10, 20, 30];
+		int[] values = [60, 100, 120];
+		int capacity = 50;
+		
+		int bestWeight = 0;
+		if ((capacity > 0) && (weights.length > 0))
+		{
+			int numItems = weights.length;
+			
+			// Initialize our solution matrix; need the (-1) relationship to capture initial state
+			int[][] solution = new int[numItems+1][capacity+1];
+			
+			// Capture the initial state...If I choose nothing, my weight should be 0
+			for (int ii=0;ii<=numItems;ii++)
+			{
+				solution[ii][0] = 0;
+			}
+			
+			for (int currentItem=0;currentItem<numItems;currentItem++)
+			{
+				int currentWeight = weights[currentItem];
+				int currentValue = values[currentItem];								
+				
+			}
+			
+		}
+		else
+		{
+			System.out.println("Trivial solution since no capacity or no items");
+		}
+		
+		System.out.println("bestWieght='" + bestWeight +"");
+	}
+	
+	@Test
 	public void testFillKnapsackShouldPass()
 	{
 		List<Item> items = Arrays.asList(new Item(10,60), new Item(20,100), new Item(30,120));
         final int capacity = 50;
-                
+
+        // This is the recursive solution
         Knapsack knapsack = new Knapsack(capacity);
         knapsack = fillSack(knapsack, items, 0);
         
