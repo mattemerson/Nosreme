@@ -18,8 +18,8 @@ public class KnapsackProblemTest
 	@Test
 	public void testFullKnapsackUsingDynamicProgrammingShouldPass()
 	{
-		int[] weights = [10, 20, 30];
-		int[] values = [60, 100, 120];
+		int[] weights = {10, 20, 30};
+		int[] values = {60, 100, 120};
 		int capacity = 50;
 		
 		int bestWeight = 0;
