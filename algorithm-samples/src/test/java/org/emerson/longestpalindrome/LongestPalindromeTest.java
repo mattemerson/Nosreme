@@ -13,13 +13,13 @@ public class LongestPalindromeTest {
 
 		LongestPalindromeFinder finder = new RecursiveLongestPalindromeFinder();
 
-		Assert.assertEquals("", finder.findPalindrome(null));
-		Assert.assertEquals("", finder.findPalindrome(""));
-		Assert.assertEquals("a", finder.findPalindrome("a"));
-		Assert.assertEquals("aa", finder.findPalindrome("aa"));
-		Assert.assertEquals("ababa", finder.findPalindrome("ababa"));
-		Assert.assertEquals("ababa", finder.findPalindrome("tababaz"));
-		Assert.assertEquals("geeksskeeg", finder.findPalindrome("forgeeksskeegfor"));
+		Assert.assertEquals("", finder.findLongestPalindrome(null));
+		Assert.assertEquals("", finder.findLongestPalindrome(""));
+		Assert.assertEquals("a", finder.findLongestPalindrome("a"));
+		Assert.assertEquals("aa", finder.findLongestPalindrome("aa"));
+		Assert.assertEquals("ababa", finder.findLongestPalindrome("ababa"));
+		Assert.assertEquals("ababa", finder.findLongestPalindrome("tababaz"));
+		Assert.assertEquals("geeksskeeg", finder.findLongestPalindrome("forgeeksskeegfor"));
 	}
 }
 

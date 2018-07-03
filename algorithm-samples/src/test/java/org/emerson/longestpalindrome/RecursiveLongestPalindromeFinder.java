@@ -9,7 +9,7 @@ public class RecursiveLongestPalindromeFinder implements LongestPalindromeFinder
 	 * @return
 	 */
 	@Override
-	public String findPalindrome(String input)
+	public String findLongestPalindrome(String input)
 	{
 		// Trivial example, there is no data
 		if ( (input == null) ||
