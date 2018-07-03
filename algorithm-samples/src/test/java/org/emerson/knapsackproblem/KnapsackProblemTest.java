@@ -53,7 +53,7 @@ public class KnapsackProblemTest
 	}
 	
 	@Test
-	public void testFillKnapsackShouldPass()
+	public void testFillKnapsackRecursivelyShouldPass()
 	{
 		List<Item> items = Arrays.asList(new Item(10,60), new Item(20,100), new Item(30,120));
         final int capacity = 50;
@@ -76,19 +76,22 @@ public class KnapsackProblemTest
 		// Let's get the next item
 		Item item = items.get(currentItem);
 		
-		// If it doesn't fit, just return the existing solution
+		// If it doesn't fit, just advance to the next item
 		if (knapsack.getRemainingCapacity() < item.getWeight())
 		{
-			return knapsack;
+			return fillSack(knapsack, items, currentItem+1);
 		}
-		
-		// Otherwise, add the item to the knapsack
-		Knapsack newKnapsack = new Knapsack(knapsack);
-		newKnapsack.addItem(item);
-		
-		Knapsack finalSack = bestSack(fillSack(knapsack, items, currentItem +1), fillSack(newKnapsack, items, currentItem+1));
-		
-		return finalSack;
+		else
+		{
+			// Otherwise, add the item to the knapsack
+			Knapsack newKnapsack = new Knapsack(knapsack);
+			newKnapsack.addItem(item);
+			
+			// Need to consider, the added the item and didn't add the item cases
+			Knapsack finalSack = bestSack(fillSack(knapsack, items, currentItem +1), fillSack(newKnapsack, items, currentItem+1));
+			
+			return finalSack;			
+		}
 	}
 	
 	public Knapsack bestSack(Knapsack knapsack, Knapsack otherSack)
