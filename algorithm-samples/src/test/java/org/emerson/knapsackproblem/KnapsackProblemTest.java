@@ -21,35 +21,56 @@ public class KnapsackProblemTest
 		int[] weights = {10, 20, 30};
 		int[] values = {60, 100, 120};
 		int capacity = 50;
+		int numberOfItems = weights.length;
 		
-		int bestWeight = 0;
 		if ((capacity > 0) && (weights.length > 0))
 		{
-			int numItems = weights.length;
-			
 			// Initialize our solution matrix; need the (-1) relationship to capture initial state
-			int[][] solution = new int[numItems+1][capacity+1];
-			
-			// Capture the initial state...If I choose nothing, my weight should be 0
-			for (int ii=0;ii<=numItems;ii++)
+			int[][] solutions = new int[numberOfItems+1][capacity+1];
+		
+			// Initialize our calculation; if there are no items, the solved value must be 0
+			for (int weight=0;weight<=capacity;weight++)
 			{
-				solution[ii][0] = 0;
+				solutions[0][weight] = 0;
+			}
+						
+			// Iterate over every possible item
+			for (int ii=1;ii<=numberOfItems;ii++)
+			{
+				int previousItem = ii  - 1;
+				int itemRef = ii - 1;
+								
+				// Iterate over hte range of weights
+				for (int weight=0;weight<=capacity;weight++)
+				{
+					System.out.println("(item,weight)=(" + ii + "," + weight + ")");
+					
+					int itemWeight = weights[itemRef];
+					int itemValue = values[itemRef];
+										
+					// If the item won't fit, the best solution has to be the previous one
+					if (itemWeight>weight)
+					{
+						solutions[ii][weight] = solutions[previousItem][weight]; 
+					}
+					else
+					{
+						// If it does, fit, the best solution is the previous best solution + this one
+						int max = Math.max( solutions[previousItem][weight], 
+											solutions[previousItem][weight - weights[itemRef]] + itemValue);
+						solutions[ii][weight] = max;
+						
+					}															
+				}	
 			}
 			
-			for (int currentItem=0;currentItem<numItems;currentItem++)
-			{
-				int currentWeight = weights[currentItem];
-				int currentValue = values[currentItem];								
-				
-			}
-			
+			int value = solutions[numberOfItems][capacity];
+			System.out.println("value=" + value);
 		}
 		else
 		{
 			System.out.println("Trivial solution since no capacity or no items");
 		}
-		
-		System.out.println("bestWieght='" + bestWeight +"");
 	}
 	
 	@Test
