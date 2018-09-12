@@ -28,6 +28,13 @@ public class Person {
 		
 	}
 	
+	public Person(String name, int age, String state)
+	{
+		this.name = name;
+		this.age = age;
+		this.state = state;
+	}
+	
 	public Person(String name, LocalDate birthday, Sex gender, String emailAddress, int age)
 	{
 		this.name = name;
@@ -87,5 +94,11 @@ public class Person {
 	public void printPerson()
 	{
 		System.out.println(toString()); 
+	}
+	
+	public String toZString()
+	{
+		String val = getName()+"," + getAge() + "," + getState(); 
+		return val;
 	}
 }

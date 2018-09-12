@@ -16,7 +16,7 @@ public class TreeTester
 	@Test
 	public void testBreadthFirstInsertShouldPass()
 	{
-		String filename1 = "src/test/java/org/emerson/zaius/bst/input.txt";
+		String filename1 = "resources/test/org/emerson/zaius/bst/input.txt";
 		StringFileDAO dao = new StringFileDAO();
 		List<String> lines = dao.readLines(filename1);
 		String line = lines.get(0);		
@@ -42,7 +42,7 @@ public class TreeTester
 				
 		System.out.println(actuals);
 		
-		String filename2 = "src/test/java/org/emerson/zaius/bst/output.txt";
+		String filename2 = "resources/test/org/emerson/zaius/bst/output.txt";
 		List<String> expected = dao.readLines(filename2);
 		System.out.println(expected);
 		

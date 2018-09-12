@@ -54,7 +54,7 @@ public class SqlTester
 
 			};
 		
-		String filename1 = "src/test/java/org/emerson/zaius/sql/people.csv";
+		String filename1 = "resources/test/org/emerson/zaius/sql/people.csv";
 		
 		PersonFileDAO personDAO = new PersonFileDAO();
 		List<Person> persons = personDAO.readLines(mapToItem, filename1);
@@ -74,7 +74,7 @@ public class SqlTester
 		actuals.addAll(calculateAverageAgePerStateFilteredByAge(persons));
 		actuals.add("");
 		
-		String filename2 = "src/test/java/org/emerson/zaius/sql/output.txt";
+		String filename2 = "resources/test/org/emerson/zaius/sql/output.txt";
 		List<String> expected = readFileLineByLineUsingStreams(filename2);
 		//System.out.println(expected);
 
